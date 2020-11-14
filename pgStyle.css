@@ -4,11 +4,115 @@ body{
     background:  #050506; 
   } 
 
-  .main h1 {
+  .header{
+    font-family: davis, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 30px 50px 20px 50px;
+    text-align: justify;
+  }
+
+  #logo a{
+      text-decoration: none;
+      transition:color 0.50s ease;
+      display: inline-block;
+      position: relative;
+    }
+
+    #logo img{
+      width: 200px;
+      height: 100px;
+    }
+
+  /*============ Map =============*/
+  .svgMap{
+    float: right;
+    display: block;
+  }
+
+  #svg {
+    width: 50px;
+    height: 50px;
+  }
+  
+
+  /*============ Page Content =============*/
+  .grid{
+    margin: auto;
+    display: grid;
+    height: auto;
+    width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-column-gap: 40px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .itema{
+    grid-column: 1 / span 2;
+    overflow: hidden;
+  }
+
+  .itemb{
+    grid-column: 1 / span 2;
+    overflow: hidden;
+  }
+    /*============ Title =============*/
+   
+
+  h1 {
+    display: inline-block;
     font-size: 60px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     text-align: left;
     color: white;
+    margin: 0 auto 0 auto;
+    
     
   }
+
+  /*============ Content =============*/
+  img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  video {
+    display: block;
+    margin: 0 auto;
+    width: 1200px;
+    height: 800px;
+  }
+
+
+  @media only screen and (max-width: 2100px){
+    video {
+      width: 900px;
+      height: 500px;
+    }
+  }
+
+  @media only screen and (max-width: 1200px){
+
+  }
+
+  @media only screen and (max-width: 992px){
+    
+  }
+
+  @media only screen and (max-width: 769px){
+    
+  }
+
+  @media only screen and (max-width: 600px){
+  
+  }
+
+  @media only screen and (max-width: 370px){
+   
+  }
+  

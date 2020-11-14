@@ -77,7 +77,6 @@ function menuClick(){
     };
 }
 
-
 // Get the modal
 var modal = document.getElementById("myModal" || "myModal2");
 
