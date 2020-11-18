@@ -24,21 +24,15 @@ body {
   height: 100px;
 }
 
-/*============ Title =============*/
-h1 {
-  font-size: 60px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  text-align: left;
-  color: white;
-  margin: 30px auto 0 auto;
-  justify-content: center;
+#logo:hover {
+  opacity: 0.7;
 }
 
 /*============ Map =============*/
 .svgMap {
   float: right;
   display: block;
+  margin-top: 20px;
 }
 
 #svg {
@@ -115,6 +109,17 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/*============ Title =============*/
+h1 {
+  font-size: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-align: left;
+  color: white;
+  margin: 30px auto 0 auto;
+  justify-content: center;
+}
+
 /*============ Page Content =============*/
 .grid {
   margin: auto;
@@ -146,6 +151,21 @@ img.hover-shadow {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 120%;
+}
+
+/*============ Content =============*/
+img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+video {
+  display: block;
+  margin: 0 auto;
+  width: 1200px;
+  height: 800px;
 }
 
 /*============ Remote Buttons =============*/
@@ -328,35 +348,166 @@ i {
   left: 42%;
 }
 
-/*============ Content =============*/
-img {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-}
-
-video {
-  display: block;
-  margin: 0 auto;
-  width: 1200px;
-  height: 800px;
-}
-
 @media only screen and (max-width: 2100px) {
+  .grid {
+    width: 1200px;
+    grid-column-gap: 10px;
+  }
+
   video {
-    width: 900px;
-    height: 500px;
+    width: 1000px;
+    height: 600px;
+  }
+
+  .itema {
+    padding: 0 0 0 20px;
+  }
+
+  .itemc {
+    padding: 390px 0 0 20px;
+    background-size: 130%;
+  }
+
+  nav {
+    width: 150px;
+    height: 150px;
+  }
+
+  .center-button {
+    height: 33%;
+    width: 33%;
+    top: 33%;
+    left: 33%;
+  }
+
+  .button {
+    width: 46%;
+    height: 46%;
   }
 }
 
 @media only screen and (max-width: 1200px) {
+  .header {
+    padding: 20px 30px 0 30px;
+  }
+
+  .grid {
+    width: 1000px;
+    grid-column-gap: 10px;
+  }
+
+  video {
+    width: 900px;
+    height: 500px;
+  }
+
+  .itema {
+    padding: 0 0 0 50px;
+  }
+
+  .itemc {
+    padding: 340px 0 0 10px;
+    background-size: 140%;
+    margin-right: 20px;
+  }
+
+  nav {
+    width: 120px;
+    height: 120px;
+  }
+
+  .center-button {
+    height: 29%;
+    width: 29%;
+    top: 35%;
+    left: 35%;
+  }
 }
 
 @media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 50px;
+  }
+  .grid {
+    width: 900px;
+    grid-column-gap: 10px;
+  }
+
+  video {
+    width: 750px;
+    height: 350px;
+    margin: 0 0 0 0;
+  }
+
+  .itema {
+    padding: 0 0 0 100px;
+    grid-column: 1 / span 3;
+  }
+
+  .itemb {
+    grid-column: 1 / span 2;
+  }
+
+  .itemc {
+    padding: 170px 0 0 10px;
+    background-size: 140%;
+    margin-right: 70px;
+  }
+
+  nav {
+    width: 120px;
+    height: 120px;
+  }
+
+  .center-button {
+    height: 29%;
+    width: 29%;
+    top: 35%;
+    left: 35%;
+  }
 }
 
 @media only screen and (max-width: 769px) {
+  h1 {
+    font-size: 50px;
+  }
+  .grid {
+    width: 900px;
+    grid-column-gap: 10px;
+  }
+
+  video {
+    width: 600px;
+    height: 200px;
+    margin: 0 0 0 0;
+  }
+
+  .itema {
+    padding: 0 0 0 100px;
+    grid-column: 1 / span 3;
+  }
+
+  .itemb {
+    grid-column: 1 / span 2;
+  }
+
+  .itemc {
+    padding: 170px 0 0 10px;
+    background-size: 140%;
+    margin-right: 50px;
+  }
+
+  nav {
+    width: 120px;
+    height: 120px;
+  }
+
+  .center-button {
+    height: 29%;
+    width: 29%;
+    top: 35%;
+    left: 35%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
