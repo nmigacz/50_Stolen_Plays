@@ -5,18 +5,14 @@ body {
 }
 
 .header {
-  font-family: davis, sans-serif;
-  font-weight: 400;
-  font-style: normal;
   padding: 30px 50px 0 50px;
-  text-align: justify;
 }
 
 #logo a {
   text-decoration: none;
   transition: color 0.5s ease;
-  display: inline-block;
-  position: relative;
+  position: block;
+  margin: 0 auto;
 }
 
 #logo img {
@@ -24,89 +20,8 @@ body {
   height: 100px;
 }
 
-#logo:hover {
+#logo a:hover {
   opacity: 0.7;
-}
-
-/*============ Map =============*/
-.svgMap {
-  float: right;
-  display: block;
-  margin-top: 20px;
-}
-
-#svg {
-  width: 50px;
-  height: 50px;
-}
-
-#svg:hover {
-  opacity: 0.7;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-}
-
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1200px;
-}
-
-/* The Close Button */
-.close {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Hide the slides by default */
-.mySlides {
-  display: none;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-
-img.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-img.hover-shadow {
-  transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*============ Title =============*/
@@ -131,6 +46,7 @@ h1 {
   grid-column-gap: 10px;
   overflow-x: hidden;
   overflow-y: hidden;
+  margin-top: -20px;
 }
 
 .itema {
@@ -149,7 +65,7 @@ h1 {
   padding: 550px 0 0 20px;
   background-image: url("remote/remote.svg");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center bottom;
   background-size: 120%;
 }
 
@@ -392,7 +308,7 @@ i {
   }
 
   .grid {
-    width: 1000px;
+    width: 900px;
     grid-column-gap: 10px;
   }
 
@@ -408,7 +324,6 @@ i {
   .itemc {
     padding: 340px 0 0 10px;
     background-size: 140%;
-    margin-right: 20px;
   }
 
   nav {
@@ -429,26 +344,23 @@ i {
     font-size: 50px;
   }
   .grid {
-    width: 800px;
+    width: 750px;
     grid-column-gap: 10px;
-    margin-left: -50px;
   }
 
   video {
-    width: 750px;
+    width: 600px;
     height: 350px;
     margin: 0 0 0 0;
   }
 
   .itema {
-    padding: 0 0 0 100px;
+    padding: 0 0 0 25px;
     grid-column: 1 / span 3;
   }
 
   .itemb {
     grid-column: 1 / span 2;
-    margin-left: -30px;
-    padding-right: 40px;
   }
 
   .itemc {
@@ -473,49 +385,85 @@ i {
 /*=============== Still under Progress ============*/
 @media only screen and (max-width: 769px) {
   h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
   .grid {
-    width: 900px;
+    width: 600px;
     grid-column-gap: 10px;
+    grid-row-gap: 10px;
   }
 
   video {
     width: 650px;
     height: 250px;
-    margin: 0 0 0 0;
   }
 
   .itema {
-    padding: 0 0 0 70px;
-    grid-column: 1 / span 2;
+    padding: 0 0 0 120px;
+    grid-column: 1 / span 3;
   }
 
   .itemb {
-    grid-column: 50%;
-    margin-left: 50px;
+    grid-column: 1 / span 3;
   }
 
   .itemc {
-    padding: 170px 0 0 10px;
-    background-size: 140%;
-  }
-
-  nav {
-    width: 120px;
-    height: 120px;
-  }
-
-  .center-button {
-    height: 29%;
-    width: 29%;
-    top: 35%;
-    left: 35%;
+    padding: 50px 0 0 10px;
+    background-size: 40%;
+    grid-column: 1 / span 3;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  .grid {
+    width: 370px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  video {
+    width: 450px;
+    height: 200px;
+  }
+
+  .itema {
+    padding: 0 0 0 30px;
+    grid-column: 1 / span 3;
+  }
+
+  .itemb {
+    margin-left: -30px;
+  }
+
+  .itemc {
+    padding: 50px 0 0 10px;
+    background-size: 60%;
+  }
 }
 
 @media only screen and (max-width: 370px) {
+  .grid {
+    width: 300px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  video {
+    width: 300px;
+    height: 200px;
+  }
+
+  .itema {
+    padding: 0 0 0 0;
+    grid-column: 1 / span 3;
+  }
+
+  .itemb {
+    margin-left: 0;
+  }
+
+  .itemc {
+    padding: 50px 0 0 10px;
+    background-size: 80%;
+  }
 }
