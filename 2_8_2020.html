@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-   <!--- Basic Page Needs  -->
-   <meta charset="UTF-8" />
+  <head>
+    <!--- Basic Page Needs  -->
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>50 Stolen Plays - 2/8/2020</title>
-    <link rel="stylesheet" href="pgStyle.css">
-</head>
+    <title>50 Stolen Plays - 2 August 2020</title>
+    <link rel="stylesheet" href="pgStyle.css" />
+    <script src="page.js"></script>
+  </head>
 
-<body>
-<!--- Header  -->
-<div class="header">
-    <!--- Name Logo  -->
-    <span id="logo">
-     <a href="index.html"><img src="content/dvd_logo_Home.svg" alt="50 Stolen Plays"></a>
-     </span>
+  <body>
+    <!--- Header  -->
+    <div class="header">
+      <!--- Name Logo  -->
+      <span id="logo">
+        <a href="index.html"
+          ><img src="content/dvd_logo_Home.svg" alt="50 Stolen Plays"
+        /></a>
+      </span>
+    </div>
 
-     <span class="svgMap">
-      <img id="svg" src="infoMap.svg" alt="info map">
-     </span>
-  
-     </div>
-
-
-<div class="grid" style="row-gap: 20px;">
-  <div class="itema">
-    <h1>2 August 2020</h1>
-  </div>
-  <div class="itemb">
-    <video controls>
-        <source src="content/2_8_2020.mp4" type="video/mp4">
-      Your browser does not support video, try another browser.
-      </video>
-  </div>
-  <div class="itemc">
-    <img src="remote/remote.svg" alt="remote">
-  </div>
-</div>
-</body>
+    <div class="grid">
+      <div class="itema">
+        <h1>2/8/2020</h1>
+      </div>
+      <div class="itemb">
+        <video controls>
+          <source src="content/2_8_2020.mp4" type="video/mp4" />
+          Your browser does not support video, try another browser.
+        </video>
+      </div>
+      <div class="itemc">
+        <nav>
+          <a class="button Up" href="24_8_2020.html"
+            ><i class="icon-play"></i
+          ></a>
+          <a class="button right" href="12_8_2020_4.html"
+            ><i class="icon-forward"></i
+          ></a>
+          <a class="button left" href=""><i class="icon-backward"></i></a>
+          <a class="button Down" href=""><i class="icon-pause"></i></a>
+          <a class="center-button" href="#"><i class="icon-stop"></i></a>
+        </nav>
+      </div>
+    </div>
+  </body>
 </html>
