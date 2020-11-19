@@ -111,10 +111,11 @@ a:hover {
   text-align: center;
   padding: 0 0 0 0;
   margin: 0 0 0 0;
+  text-decoration: none;
 }
 
 .modal-content h3:hover {
-  color: yellow;
+  color: blue;
 }
 
 /* The Close Button */
@@ -136,6 +137,10 @@ a:hover {
 }
 
 @media only screen and (max-width: 1200px) {
+  .mainText{
+    margin-bottom: 90px;
+  }
+
   h1{
     font-size: 50px;
 }
@@ -145,23 +150,46 @@ a:hover {
 }
 
 @media only screen and (max-width: 992px) {
-  .mainText{
-    margin-bottom: 70px;
-  }
+  h1{
+    font-size: 45px;
+}
+
+.names h2{
+  font-size: 15px;
+}
 }
 
 @media only screen and (max-width: 769px) {
   .mainText{
     margin-bottom: 70px;
   }
-
-  .names h2{
-    font-size: 15px;
-  }
 }
 
 @media only screen and (max-width: 600px) {
+  .mainText{
+    margin-bottom: 90px;
+  }
+
+  .names h2{
+    padding: 0;
+  }
 }
 
 @media only screen and (max-width: 370px) {
+  .mainText{
+    margin-bottom: 100px;
+    margin-right: 50px;
+  }
+
+  .modal-content h2{
+    font-size: 20px;
+  }
+
+  .modal-content h3{
+    font-size: 15px;
+  }
+
+  .names h2{
+    font-size: 12px;
+  }
 }
