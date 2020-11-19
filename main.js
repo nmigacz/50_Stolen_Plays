@@ -2,7 +2,7 @@
 //link to github for bouncing DVD: https://github.com/AlessioMaddaluno/bouncing-dvd-logo
 
 let speed = 70;
-let scale = 0.4; // Image scale (I work on 1080p monitor)
+let scale = 0.3; // Image scale (I work on 1080p monitor)
 let canvas;
 let ctx;
 let logoColor;
@@ -24,9 +24,13 @@ let dvd = {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
+  //my edit to the code
+  if (canvas.width <= 992 || canvas.height <= 700) {
+    scale = 0.2;
+  }
+
   pickColor();
   update();
-  menuClick();
   document.body.style.background = "index.html(" + canvas.toDataURL() + ")";
 })();
 
