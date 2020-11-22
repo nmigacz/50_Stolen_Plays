@@ -6,6 +6,9 @@ body {
 
 .header {
   padding: 30px 50px 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #logo a {
@@ -48,6 +51,7 @@ h1 {
   overflow-y: hidden;
   margin-top: -20px;
   margin-bottom: 10px;
+  grid-row-gap: 10px;
 }
 
 .itema {
@@ -70,6 +74,122 @@ h1 {
   background-size: 120%;
 }
 
+/* ======== Comment Pages ==========*/
+
+.itemaCom {
+  grid-column: 1 / span 4;
+  overflow: hidden;
+  padding: 0 0 0 210px;
+}
+
+.itembCom {
+  grid-column: 1 / span 3;
+  overflow: hidden;
+  margin-left: 100px;
+  height: 700px;
+}
+
+.itemcCom {
+  overflow: hidden;
+  padding: 0px 60px  0 40px;
+  background-image: url("remote/remote.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 90%;
+  height: 700px;
+}
+
+.itemdCom{
+  grid-column: 1 / span 4;
+  padding: 0 100px;
+}
+
+.btns {
+  padding: 400px 0 0 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input, textarea {
+  background-color: #eeeeee;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  padding: 10px 10px;
+  margin: 10px 10px;
+}
+
+ input {
+   width: 300px;
+ }
+
+ textarea {
+   width: 700px;
+   height: 150px;
+ }
+
+button {
+  display: block;
+  margin: 0 auto;
+  font-size: 25px;
+  padding: 20px 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  border-radius: 15px;
+  border-color: none;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+hr {
+  width: 500px;
+  height: 4px;
+  background-color: #eeeeee;
+  margin: -20px auto 20px auto;
+  
+}
+
+table {
+  color: white;
+  border-spacing: 5px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+}
+
+td {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eeeeee;
+  padding: 0px 25px;
+  border-radius: 10px;
+  width: 1000px
+}
+
+h5 {
+  font-weight: 800;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+p {
+  margin-top: -15px;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
 /*============ Content =============*/
 #img {
   display: block;
@@ -302,6 +422,16 @@ i {
     background-size: 130%;
   }
 
+  .itembCom {
+    height: 600px;
+  }
+  
+  .itemcCom {
+    padding: 0px 60px  0 50px;
+    background-size: 90%;
+    height: 600px;
+  }
+
   h2 {
     margin: 200px 200px 0 200px;
   }
@@ -335,7 +465,7 @@ i {
   }
 
   #video {
-    width: 900px;
+    width: 700px;
     height: 500px;
   }
 

@@ -1,15 +1,14 @@
 // ============ Comments Section Firebase ===============
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 var firebaseConfig = {
-  apiKey: "AIzaSyDGCbnuOnZmhrGH7tr32ZvOCY5rXRY06Ds",
-  authDomain: "stolen-plays.firebaseapp.com",
-  databaseURL: "https://stolen-plays.firebaseio.com",
-  projectId: "stolen-plays",
-  storageBucket: "stolen-plays.appspot.com",
-  messagingSenderId: "400505597875",
-  appId: "1:400505597875:web:fd960beb1d0668192ae5c6",
-  measurementId: "G-0D19F3M0SD"
+  apiKey: "AIzaSyDTi8tJwxvR5qgM_omfcHGLQ6CnKcK8vQ8",
+  authDomain: "stolen-plays-9c872.firebaseapp.com",
+  databaseURL: "https://stolen-plays-9c872.firebaseio.com",
+  projectId: "stolen-plays-9c872",
+  storageBucket: "stolen-plays-9c872.appspot.com",
+  messagingSenderId: "494685114527",
+  appId: "1:494685114527:web:955de5e38feaede2b212aa",
+  measurementId: "G-TZD5LLFB85"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -21,46 +20,40 @@ var title = document.title;
 
 function check(pageNum) {
   if (pageNum == title) {
-    // KYRA
-    if (pageNum == "50 Stolen Plays - 2010") {
-      formReview = db.child("2010_com");
+    if (pageNum == '50 Stolen Plays - 2010') {
+      formReview = db.child('2010_com');
     }
-    if (pageNum == "50 Stolen Plays - 2 August 2020") {
-      formReview = db.child("2_8_2020_com");
+    if (pageNum == '50 Stolen Plays - 2 August 2020') {
+      formReview = db.child('2_8_2020_com');
     }
-    if (pageNum == "50 Stolen Plays - 13 September 2016") {
-      formReview = db.child("13_9_2016_com");
+    if (pageNum == '50 Stolen Plays - 13 September 2016') {
+      formReview = db.child('13_9_2016_com');
     }
   } else {
-    console.log("wrong comment section!");
+    console.log('wrong comment section!');
   }
 }
 
-check("50 Stolen Plays - 2010");
-check("50 Stolen Plays - 2 August 2020");
-check("50 Stolen Plays - 13 September 2016");
+check('50 Stolen Plays - 2010');
+check('50 Stolen Plays - 2 August 2020');
+check('50 Stolen Plays - 13 September 2016');
 
-document.getElementById("reviewForm").addEventListener("submit", formSubmit);
+//const formReview = firebase.database().ref('comments'); // creates and names collection of reviews of particular class
+
+document.getElementById('reviewForm').addEventListener('submit', formSubmit);
 //this would change second parameter to review
 
 //write data
 function formSubmit(e) {
   e.preventDefault();
   //gets each variable from DOM
-  let name = document.querySelector("#name").value;
-  let comment = document.querySelector("#comment").value;
+  let name = document.querySelector('#name').value;
+  let comment = document.querySelector('#comment').value;
 
   sendMessage(name, comment);
   // readData();
-  // shows alert after submission
-  document.querySelector(".alert").style.display = "block";
 
-  //after submission alert pops up, hides alert after 7 secs
-  setTimeout(function () {
-    document.querySelector(".alert").style.display = "none";
-  }, 7000);
-
-  document.getElementById("reviewForm").reset();
+  document.getElementById('reviewForm').reset();
 }
 
 function sendMessage(name, comment) {
@@ -73,22 +66,22 @@ function sendMessage(name, comment) {
 
 //function readData(){
 // reads data
-formReview.on("child_added", (snap) => {
+formReview.on('child_added', (snap) => {
   var theName = snap.child("name").val();
   var theComment = snap.child("comment").val();
 
-  var table = document.getElementById("table");
-  tableChild = document.createElement("tr");
-  tableChild.innerHTML = "<td>" + theName + "</td><td>" + theComment + "</td>";
+  var table = document.getElementById('table');
+  tableChild = document.createElement('tr');
+  tableChild.innerHTML = "<td>" + "<h5>" + theName  + ":" + "</h5>" + "<p>" + theComment + "</p>" + "</td>";
   table.appendChild(tableChild);
 });
 
-formReview.on("child_changed", (snap) => {
+formReview.on('child_changed', (snap) => {
   var theName = snap.child("name").val();
   var theComment = snap.child("comment").val();
 
-  var table = document.getElementById("table");
-  tableChild = document.createElement("tr");
+  var table = document.getElementById('table');
+  tableChild = document.createElement('tr');
   tableChild.innerHTML = "<td>" + theName + "</td><td>" + theComment + "</td>";
   table.appendChild(tableChild);
 });

@@ -20,13 +20,14 @@
     </div>
 
     <div class="grid">
-      <div class="itema">
+      <div class="itemaCom">
         <h1>2010</h1>
       </div>
-      <div class="itemb">
-        <img id="img" src="content/2010.jpg" alt="Iranian Girl" style="width: 75%; height: auto;">
+      <div class="itembCom" >
+        <img id="img" src="content/2010.jpg" alt="Iranian Girl">
       </div>
-      <div class="itemc">
+      <div class="itemcCom">
+        <div class="btns">
         <nav>
           <a class="button top" href="18_6_1949.html"
             ><i class="icon-play"></i
@@ -41,40 +42,47 @@
           <div class="center-button"><i class="icon-stop"></i></div>
         </nav>
       </div>
-      <div class="itemd">
-        <form id="reviewForm">
-          <p>
-            <label>Name: </label>
-            <input type="text" name="name" id="name" required />
-          </p>
-          <p class="full">
-            <label>Comment:</label>
-            <textarea name="feedback" rows="7" id="comment"></textarea>
-          </p>
-          <p class="full">
-            <button type="submit" sendMessage()>Post</button>
-          </p>
-        </form>
       </div>
-      <div class="iteme">
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Comment</th>
-            </tr>
-          </thead>
-          <tbody id="table"></tbody>
-        </table>
-      </div>
+      <div class="itemdCom">
+        <div>
+          <div class="comment-box">
+              <div class="comment-form">
+                  <div class="header"><h4>Add a Comment</h4></div>
+                  <form id="reviewForm">
+                    <div class="form-cont">
+                      <div> 
+                          <input type="text" id="name" placeholder="Name" required/>
+                      </div>
+                      <div>
+                          <textarea id="comment" rows="3" cols="30" placeholder="Comment"></textarea>
+                      </div>
+                      <button type="submit" sendMessage()>post</button>
+                  </form>  
+                </div>
+              </div>
+              <div>
+                  <h4 class="header">Comments</h4> <hr>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th id="name1"></th>
+                        <th id="comment1"></th>
+                      </tr>
+                    </thead>
+                    <tbody id="table"></tbody>
+                  </table>
+              </div>
     </div>
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
 
-    <script src="page.js"></script>
+<script src="page.js"></script>
+
+    
   </body>
 </html>
