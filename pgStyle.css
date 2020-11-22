@@ -85,6 +85,23 @@ h1 {
   height: 800px;
 }
 
+#audio {
+  display: block;
+  margin: 20px 700px 0 0;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 30px;
+  margin: 200px 300px 0 300px;
+}
+
+h2:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
 /*============ Remote Buttons =============*/
 /*============ Created by Codepen user: Valentin =============*/
 /*============ Link to original code: https://codepen.io/vescoyez/pen/ulFtz =============*/
@@ -285,6 +302,10 @@ i {
     background-size: 130%;
   }
 
+  h2 {
+    margin: 200px 200px 0 200px;
+  }
+
   nav {
     width: 150px;
     height: 150px;
@@ -316,6 +337,11 @@ i {
   #video {
     width: 900px;
     height: 500px;
+  }
+
+  h2 {
+    font-size: 25px;
+    margin: 200px 150px 0 150px;
   }
 
   .itema {
@@ -353,6 +379,11 @@ i {
     width: 600px;
     height: 350px;
     margin: 0 0 0 0;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 200px 100px 0 100px;
   }
 
   .itema {
