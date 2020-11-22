@@ -47,6 +47,7 @@ h1 {
   overflow-x: hidden;
   overflow-y: hidden;
   margin-top: -20px;
+  margin-bottom: 10px;
 }
 
 .itema {
@@ -70,14 +71,12 @@ h1 {
 }
 
 /*============ Content =============*/
-img {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
+#img {
+  max-width: 100%;
+  height: auto;
 }
 
-video {
+#video {
   display: block;
   margin: 0 auto;
   width: 1200px;
@@ -270,7 +269,7 @@ i {
     grid-column-gap: 10px;
   }
 
-  video {
+  #video {
     width: 1000px;
     height: 600px;
   }
@@ -312,7 +311,7 @@ i {
     grid-column-gap: 10px;
   }
 
-  video {
+  #video {
     width: 900px;
     height: 500px;
   }
@@ -348,7 +347,7 @@ i {
     grid-column-gap: 10px;
   }
 
-  video {
+  #video {
     width: 600px;
     height: 350px;
     margin: 0 0 0 0;
@@ -393,7 +392,7 @@ i {
     grid-row-gap: 10px;
   }
 
-  video {
+  #video {
     width: 650px;
     height: 250px;
   }
@@ -421,7 +420,7 @@ i {
     grid-row-gap: 10px;
   }
 
-  video {
+  #video {
     width: 450px;
     height: 200px;
   }
@@ -448,7 +447,7 @@ i {
     grid-row-gap: 10px;
   }
 
-  video {
+  #video {
     width: 300px;
     height: 200px;
   }
