@@ -49,40 +49,58 @@ function formSubmit(e) {
   //gets each variable from DOM
   let name = document.querySelector('#name').value;
   let comment = document.querySelector('#comment').value;
+  let time = utils.formatTime();
 
-  sendMessage(name, comment);
+  sendMessage(name, comment, time);
   // readData();
 
   document.getElementById('reviewForm').reset();
 }
 
-function sendMessage(name, comment) {
+function sendMessage(name, comment, time) {
   let newFormReview = formReview.push();
   newFormReview.set({
     name: name,
-    comment: comment
+    comment: comment,
+    time: time
   });
 }
+
+const utils = {
+  formatTime() {
+    const options = {
+      month: '2-digit',
+      day: '2-digit',
+      year: '2-digit',
+      hour: '2-digit',
+      minute:'2-digit'
+    };
+    let now = new Date().toLocaleString('en-US', options);
+    return now;
+  }
+};
 
 //function readData(){
 // reads data
 formReview.on('child_added', (snap) => {
   var theName = snap.child("name").val();
   var theComment = snap.child("comment").val();
+  var theTime = snap.child("time").val();
 
   var table = document.getElementById('table');
   tableChild = document.createElement('tr');
-  tableChild.innerHTML = "<td>" + "<h5>" + theName  + ":" + "</h5>" + "<p>" + theComment + "</p>" + "</td>";
+  tableChild.innerHTML = "<td>" + "<header>" + "<h5>" + theName  + ":" + "<div id='time'>" + theTime + "</div>" +  "</h5>" + "</header>" + "<p>" + theComment + "</p>" + "</td>";
   table.appendChild(tableChild);
 });
 
 formReview.on('child_changed', (snap) => {
   var theName = snap.child("name").val();
   var theComment = snap.child("comment").val();
+  var theTime = snap.child("time").val();
 
   var table = document.getElementById('table');
   tableChild = document.createElement('tr');
-  tableChild.innerHTML = "<td>" + theName + "</td><td>" + theComment + "</td>";
+  tableChild.innerHTML = "<td>" + "<header>" + "<h5>" + theName  + ":" + "<div id='time'>" + theTime + "</div>" +  "</h5>" + "</header>" + "<p>" + theComment + "</p>" + "</td>";
   table.appendChild(tableChild);
 });
 //}
