@@ -27,6 +27,9 @@ let dvd = {
   //my edit to the code
   if (canvas.width <= 992 || canvas.height <= 700) {
     scale = 0.2;
+  } 
+  if(canvas.width <= 600 || canvas.height <= 500) {
+    scale = 0.1;
   }
 
   pickColor();
