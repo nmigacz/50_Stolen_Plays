@@ -20,13 +20,14 @@
     </div>
 
     <div class="grid">
-      <div class="itema">
+      <div class="itemaCom" style="padding: 0 0 0 0px;">
         <h1>13/9/2016</h1>
       </div>
-      <div class="itembCom">
-        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/GvQh1TrkTfg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="itembComVideo">
+        <iframe id="video1" width="560" height="315" src="https://www.youtube.com/embed/GvQh1TrkTfg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="itemcCom">
+        <div class="btns">
         <nav>
           <a class="button top" href="15_11_2016.html"
             ><i class="icon-play"></i
@@ -42,34 +43,37 @@
           ></a>
           <div class="center-button"><i class="icon-stop"></i></div>
         </nav>
+        </div>
       </div>
-      <div class="itemdCom" style="grid-column: 1 / span 4; padding: 0 100px 0 100px;">
-        <div class="comment-box">
-          <div class="comment-form">
-              <div class="header"><h4>Add a Comment</h4></div>
-              <form id="reviewForm">
-                  <div> 
-                      <input type="text" id="name" placeholder="Name" required/>
-                  </div>
-                  <div>
-                      <textarea id="comment" rows="3" cols="30" placeholder="Comment"></textarea>
-                  </div>
-                  <button type="submit" sendMessage()>comment</button>
-              </form>  
-          </div>
-          <div>
-              <h4 class="header">Comments</h4>
-              <table>
-                <thead>
-                  <tr>
-                    <th id="name1">Name</th>
-                    <th id="comment1">Comment</th>
-                  </tr>
-                </thead>
-                <tbody id="table"></tbody>
-              </table>
-          </div>
-      </div>
+      <div class="itemdCom">
+        <div>
+          <div class="comment-box">
+              <div class="comment-form">
+                  <div class="header"><h4>Add a Comment</h4></div>
+                  <form id="reviewForm">
+                    <div class="form-cont">
+                      <div> 
+                          <input type="text" id="name" placeholder="Name" required/>
+                      </div>
+                      <div>
+                          <textarea id="comment" rows="3" cols="30" placeholder="Comment"></textarea>
+                      </div>
+                      <button type="submit" sendMessage()>post</button>
+                  </form>  
+                </div>
+              </div>
+              <div>
+                  <h4 class="header">Comments</h4> <hr>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th id="name1"></th>
+                        <th id="comment1"></th>
+                      </tr>
+                    </thead>
+                    <tbody id="table"></tbody>
+                  </table>
+              </div>
     </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>

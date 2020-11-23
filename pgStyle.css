@@ -89,6 +89,20 @@ h1 {
   height: 700px;
 }
 
+.itembComVideo {
+  grid-column: 1 / span 3;
+  overflow: hidden;
+  height: 100%;
+}
+
+#video1 {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 0 800px 0 0;
+}
+
 .itemcCom {
   overflow: hidden;
   padding: 0px 60px  0 40px;
@@ -669,24 +683,86 @@ i {
   }
 
   #video {
-    width: 650px;
-    height: 250px;
+    width: 500px;
+    height: 300px;
   }
 
-  .itema {
-    padding: 0 0 0 120px;
+  #video1 {
+    width: 500px;
+    height: 300px;
+    padding: 0 0 0 0;
+  }
+
+  .itema, .itemaCom {
+    padding: 0 0 0 50px;
     grid-column: 1 / span 3;
   }
 
-  .itemb {
+  .itemb, .itembCom, .itembComVideo {
     grid-column: 1 / span 3;
+    display: block;
+    margin: 0 auto;
   }
 
-  .itemc {
+  .itemc, .itemcCom {
     padding: 50px 0 0 10px;
     background-size: 40%;
     grid-column: 1 / span 3;
   }
+
+  .itembCom {
+    width: 75%;
+    height: 100%;
+
+  }
+  
+  .itemcCom {
+    padding: 0px 20px 0 0;
+    background-size: 30%;
+    background-position: center bottom;
+    height: 200px;
+  }
+
+  .btns{
+    padding: 30px 20px 0 50px;
+  } 
+
+  form {
+    margin-top: -20px;
+  }
+  
+  button {
+    font-size: 20px;
+    padding: 15px 25px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+
+  .itemdCom {
+    margin-top: -50px;
+    grid-column: 1 / span 3;
+    padding: 0 0 0 0;
+  }
+
+  input, textarea {
+    font-size: 20px;
+  }
+  
+  input {
+    width: 200px;
+  }
+
+  textarea {
+    width: 300px;
+    height: 75px;;
+  }
+ 
 }
 
 @media only screen and (max-width: 600px) {
@@ -696,8 +772,8 @@ i {
     grid-row-gap: 10px;
   }
 
-  #video {
-    width: 450px;
+  #video, #video1 {
+    width: 300px;
     height: 200px;
   }
 
@@ -706,13 +782,70 @@ i {
     grid-column: 1 / span 3;
   }
 
-  .itemb {
-    margin-left: -30px;
-  }
-
   .itemc {
     padding: 50px 0 0 10px;
     background-size: 60%;
+  }
+
+  .itemaCom {
+    padding:0 0 0 0;
+  }
+
+  .itembCom {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+  }
+  
+  .itemcCom {
+    padding: 0 0 0 0;
+    background-size: 60%;
+    height: 300px;
+    margin: 0 0 0 0;
+  }
+
+  .btns{
+    padding: 100px 30px 0 40px;
+  } 
+
+  form {
+    margin-top: -20px;
+  }
+  
+  button {
+    font-size: 20px;
+    padding: 15px 25px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  hr {
+    width: 150px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+
+  .itemdCom {
+    margin-top: -50px;
+    grid-column: 1 / span 3;
+    padding: 0 0 0 0;
+  }
+
+  input, textarea {
+    font-size: 20px;
+  }
+  
+  input {
+    width: 100px;
+  }
+
+  textarea {
+    width: 300px;
+    height: 75px;;
   }
 }
 
@@ -723,9 +856,13 @@ i {
     grid-row-gap: 10px;
   }
 
-  #video {
+  #video, #video1 {
     width: 300px;
     height: 200px;
+  }
+
+  .itembComVideo {
+    margin: 0 0 0 0;
   }
 
   .itema {
@@ -740,5 +877,9 @@ i {
   .itemc {
     padding: 50px 0 0 10px;
     background-size: 80%;
+  }
+
+  textarea {
+    width: 250px;
   }
 }
