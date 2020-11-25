@@ -112,29 +112,32 @@ h1 {
 }
 
 .itembCom {
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 4;
   overflow: hidden;
-  margin-left: 100px;
-  height: 700px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .itembComVideo {
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 4;
   overflow: hidden;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #video1 {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  padding: 0 800px 0 0;
+  width: 1200px;
+  height: 800px;
+  padding: 0 0px 0 0;
 }
 
 .itemcCom {
   overflow: hidden;
   padding: 0px 60px  0 40px;
+  grid-column: 4;
   background-image: url("remote/remote.svg");
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -143,8 +146,8 @@ h1 {
 }
 
 .itemdCom{
-  grid-column: 1 / span 4;
-  padding: 0 100px;
+  grid-column: 1 / span 3;
+  padding: 0 200px 0 100px ;
 }
 
 .btns {
@@ -267,6 +270,13 @@ h2 {
 h2:hover {
   color: yellow;
   text-decoration: underline;
+}
+
+h3 {
+  color: white;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: -3px;
 }
 
 /*============ Remote Buttons =============*/
@@ -426,8 +436,8 @@ a {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  padding: 21px 0 0 0;
-  margin-left: 7px;
+  padding: 34px 0 0 0;
+  margin-left: 12px;
 }
 
 .arrow-down {
@@ -440,8 +450,8 @@ a {
   -moz-transform: rotate(-45deg);
   transform: rotate(-45deg);
   padding: 0 0 0 0;
-  margin-left: 18px;
-  margin-top: 22px;
+  margin-left: 28px;
+  margin-top: 34px;
 }
 
 .arrow-left {
@@ -454,8 +464,8 @@ a {
   -moz-transform: rotate(45deg);
   transform: rotate(45deg);
   padding: 0 0 0 0;
-  margin-left: 14px;
-  margin-top: 21px;
+  margin-left: 25px;
+  margin-top: 34px;
 }
 
 .arrow-right {
@@ -468,8 +478,8 @@ a {
   -moz-transform: rotate(225deg);
   transform: rotate(225deg);
   padding: 0 0 0 0;
-  margin-left: 16px;
-  margin-top: 19px;
+  margin-left: 28px;
+  margin-top: 30px;
 }
 
 
@@ -506,13 +516,47 @@ i {
 }
 */
 
+.user {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+color: blue;
+}
+
+.post { 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: white;
+  padding: 5px 0 10px 0;
+}
+
+.likes{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 27px;
+  color: white;
+  margin: 0 0 25px 0;
+}
+
+.indent {
+  padding-left: 70px;
+}
+
+.itemc264{
+  grid-column: 3/ span 4;
+  overflow: hidden;
+  padding: 100px 0px 0 20px;
+  background-image: url("remote/remote.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 40%;
+}
+
 @media only screen and (max-width: 2100px) {
   .grid {
     width: 1200px;
     grid-column-gap: 10px;
   }
 
-  #video {
+  #video, #video1 {
     width: 1000px;
     height: 600px;
   }
@@ -558,6 +602,7 @@ i {
 
   .itemdCom {
     margin-top: -50px;
+    padding: 0 100px 0 100px;
   }
 
   input, textarea {
@@ -597,6 +642,42 @@ i {
   .itemc2016 {
     padding: 500px 10px 0 10px;
   }
+
+  .arrow-up{
+    padding: 21px 0 0 0;
+    margin-left: 7px;
+  }
+  .arrow-down{
+    padding: 0 0 0 0;
+    margin-left: 18px;
+    margin-top: 22px;
+  }
+  .arrow-left{
+    padding: 0 0 0 0;
+    margin-left: 14px;
+    margin-top: 21px;
+  }
+  .arrow-right{
+    padding: 0 0 0 0;
+    margin-left: 16px;
+    margin-top: 19px;
+  }
+
+  .itemd264{
+    padding: 0 0 0 30px;
+  }
+
+  .user {
+    font-size: 16px;
+    }
+    
+    .post { 
+      font-size: 22px;
+    }
+    
+    .likes{
+      font-size: 25px;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -605,7 +686,7 @@ i {
   }
 
   .grid {
-    width: 900px;
+    width: 1000px;
     grid-column-gap: 10px;
   }
 
@@ -629,8 +710,13 @@ i {
     height: 500px;
   }
 
+  #video1 {
+    width: 800px;
+    height: 600px;
+  }
+
   .btns {
-    padding: 320px 0 0 20px;
+    padding: 300px 0 0 20px;
   }
 
   form {
@@ -647,6 +733,7 @@ i {
 
   .itemdCom {
     margin-top: -50px;
+    padding: 0 100px 0 0;
   }
 
   input, textarea {
@@ -655,6 +742,7 @@ i {
 
   textarea {
     height: 100px;
+    width: 600px;
   }
 
   h2 {
@@ -667,21 +755,10 @@ i {
   }
 
   .itemc {
-    padding: 340px 0 0 10px;
+    padding: 300px 0 0 10px;
     background-size: 140%;
   }
 
-  nav {
-    width: 120px;
-    height: 120px;
-  }
-
-  .center-button {
-    height: 29%;
-    width: 29%;
-    top: 35%;
-    left: 35%;
-  }
 
   .itemc1993 {
     padding: 300px 0 0 0;
@@ -698,6 +775,10 @@ i {
   }
   .itemc2016 {
     padding: 300px 10px 0 10px;
+  }
+
+  .itemc264{
+    background-size: 50%;
   }
 }
 
@@ -720,13 +801,15 @@ i {
   }
   
   .itemcCom {
+    grid-column: 1 / span 4;
     padding: 0px 20px 0 0;
-    background-size: 100%;
+    background-size: 30%;
     height: 400px;
+    background-position: center bottom;
   }
 
   .btns{
-    padding: 220px 25px 0 45px;
+    padding: 190px 25px 0 60px;
   } 
 
   form {
@@ -746,12 +829,21 @@ i {
   }
 
   .itemdCom {
+    grid-column: 1 / span 4;
     margin-top: -50px;
-    padding: 0 0 0 0;
+    padding: 0 0px 0 0;
+  }
+
+  hr{
+    width: 400px;
   }
 
   input, textarea {
     font-size: 20px;
+  }
+
+  textarea{
+    width: 350px;
   }
 
   h2 {
@@ -774,18 +866,6 @@ i {
     margin-right: 20px;
   }
 
-  nav {
-    width: 120px;
-    height: 120px;
-  }
-
-  .center-button {
-    height: 29%;
-    width: 29%;
-    top: 35%;
-    left: 35%;
-  }
-
   .itemb2018 {
     display: flex;
     justify-content: center;
@@ -799,6 +879,25 @@ i {
   .itemc2016 {
     padding: 270px 10px 0 10px;
   }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .user {
+    font-size: 15px;
+    }
+    
+    .post { 
+      font-size: 20px;
+    }
+    
+    .likes{
+      font-size: 25px;
+    }
+    .itemc264{
+      background-size: 40%;
+    }
 }
 
 
@@ -807,7 +906,7 @@ i {
     font-size: 40px;
   }
   .grid {
-    width: 600px;
+    width: 620px;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
@@ -823,38 +922,32 @@ i {
     padding: 0 0 0 0;
   }
 
-  .itema, .itemaCom {
+  .itema {
     padding: 0 0 0 50px;
     grid-column: 1 / span 3;
   }
 
-  .itemb, .itembCom, .itembComVideo {
+  .itemb {
     grid-column: 1 / span 3;
     display: block;
     margin: 0 auto;
   }
 
-  .itemc, .itemcCom {
+  .itemc {
     padding: 50px 0 0 10px;
     background-size: 40%;
     grid-column: 1 / span 3;
   }
-
-  .itembCom {
-    width: 75%;
-    height: 100%;
-
-  }
   
   .itemcCom {
-    padding: 0px 20px 0 0;
-    background-size: 30%;
+    padding: 0px 0px 0 0;
+    background-size: 35%;
     background-position: center bottom;
-    height: 200px;
+    height: 250px;
   }
 
   .btns{
-    padding: 30px 20px 0 50px;
+    padding: 50px 0px 0 20px;
   } 
 
   form {
@@ -862,21 +955,24 @@ i {
   }
   
   button {
-    font-size: 20px;
-    padding: 15px 25px;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  hr{
+    width: 300px;
   }
 
   h5 {
-    font-size: 20px;
+    font-size: 18px;
   }
   
   p {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .itemdCom {
     margin-top: -50px;
-    grid-column: 1 / span 3;
     padding: 0 0 0 0;
   }
 
@@ -889,8 +985,12 @@ i {
   }
 
   textarea {
-    width: 300px;
-    height: 75px;;
+    width: 400px;
+    height: 50px;;
+  }
+
+  .itemc264{
+    background-size: 50%;
   }
  
 }
@@ -961,7 +1061,6 @@ i {
 
   .itemdCom {
     margin-top: -50px;
-    grid-column: 1 / span 3;
     padding: 0 0 0 0;
   }
 
@@ -981,6 +1080,26 @@ i {
   .itemb2018 img {
     width: 100%;
   }
+
+
+  .itemd264{
+    padding: 0 10px;
+  }
+
+  .user {
+    font-size: 12px;
+    }
+    
+    .post { 
+      font-size: 16px;
+    }
+    
+    .likes{
+      font-size: 20px;
+    }
+    .itemc264{
+      background-size: 100%;
+    }
 }
 
 @media only screen and (max-width: 370px) {
