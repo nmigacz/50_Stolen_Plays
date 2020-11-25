@@ -147,7 +147,7 @@ h1 {
 
 .itemdCom{
   grid-column: 1 / span 3;
-  padding: 0 200px 0 100px ;
+  padding: 0 200px 0 px ;
 }
 
 .btns {
@@ -602,11 +602,15 @@ color: blue;
 
   .itemdCom {
     margin-top: -50px;
-    padding: 0 100px 0 100px;
+    padding: 0 50px 0 0px;
   }
 
   input, textarea {
     font-size: 20px;
+  }
+
+  td {
+    width: 800px
   }
 
   h2 {
@@ -745,6 +749,10 @@ color: blue;
     width: 600px;
   }
 
+  td {
+    width: 580px
+  }
+
   h2 {
     font-size: 25px;
     margin: 200px 150px 0 150px;
@@ -756,7 +764,7 @@ color: blue;
 
   .itemc {
     padding: 300px 0 0 10px;
-    background-size: 140%;
+    background-size: 120%;
   }
 
 
